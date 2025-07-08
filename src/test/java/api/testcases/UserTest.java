@@ -7,7 +7,7 @@ import com.github.javafaker.Faker;
 import api.endpoints.userEndPoints;
 import api.payload.user;
 import io.restassured.response.Response;
-import org.apache.logging.log4j.EventLogger;
+//import org.apache.logging.log4j.EventLogger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,7 +41,7 @@ public class UserTest {
 	public void testCreateUser()
 	{
     	Response response= userEndPoints.createUser(userPayload);
-    	System.out.println("Create user data");
+    	//System.out.println("Create user data");
     	//Log response
     	response.then().log().all();
     	
@@ -57,7 +57,7 @@ public class UserTest {
 	{
     	Thread.sleep(2000); 
     	Response response= userEndPoints.GetUser(this.userPayload.getUsername());
-    	System.out.println("Read user data");
+    	System.out.println("Read User Data");
     	//Log response
     	response.then().log().all();
     	
